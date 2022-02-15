@@ -1,10 +1,6 @@
-package hackerRank.days.first;
+package hackerRank.days.zero;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class HelloWorld {
     public static void main(String[] args) {

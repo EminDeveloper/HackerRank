@@ -1,4 +1,4 @@
-package hackerRank.days.second;
+package hackerRank.days.first;
 
 import java.util.Scanner;
 
