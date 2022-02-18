@@ -1,4 +1,5 @@
 package hackerRank.days.sixth;
+
 import java.io.*;
 import java.math.*;
 import java.security.*;
@@ -8,53 +9,36 @@ import java.util.concurrent.*;
 import java.util.function.*;
 import java.util.regex.*;
 import java.util.stream.*;
+
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
-class Result{
-
-    /*
-     * Complete the 'countSort' function below.
-     *
-     * The function accepts 2D_STRING_ARRAY arr as parameter.
-     */
-
-    public static void countSort(List<List<String>> arr)  {
-        // Write your code here
-        Collections.sort(arr, new Comparator<List<String>>() {
-            @Override
-            public int compare(List<String> o1, List<String> o2) {
-                return o1.get(0).compareTo(o2.get(0));
-            }
-        });
-
-
-    }
-
-}
-
-
 public class Solution {
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+    public static void main(String[] args) {
 
-        int n = Integer.parseInt(bufferedReader.readLine().trim());
+        Scanner scanner = new Scanner(System.in);
 
-        List<List<String>> arr = new ArrayList<>();
+        int entries = scanner.nextInt();
+        StringBuilder[] freqs = new StringBuilder[100];
 
-        IntStream.range(0, n).forEach(i -> {
-            try {
-                arr.add(
-                        Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-                                .collect(toList())
-                );
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
+        for (int i = 0; i < entries; i++) {
+            int idx = scanner.nextInt();
+            if (i < entries / 2) {
+                freqs[idx] = freqs[idx] == null ? new StringBuilder("-")
+                        : freqs[idx].append(" -");
+                scanner.next();
+            } else {
+                freqs[idx] = freqs[idx] == null ? new StringBuilder(scanner.next())
+                        : freqs[idx].append(" ").append(scanner.next());
             }
-        });
-        Result.countSort(arr);
+        }
 
-        System.out.println(arr);
-        bufferedReader.close();
+        for (int i = 0; i < freqs.length; i++) {
+            if (freqs[i] != null) {
+                System.out.print(freqs[i].toString());
+                System.out.print(" ");
+            }
+        }
+        System.out.println();
     }
 }
