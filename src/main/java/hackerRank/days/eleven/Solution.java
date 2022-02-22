@@ -1,24 +1,14 @@
 package hackerRank.days.eleven;
 
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
-
-
 
 public class Solution {
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int max = Integer.MIN_VALUE;
         int arr[][] = new int[6][6];
+
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 6; j++) {
                 arr[i][j] = s.nextInt();
@@ -30,6 +20,7 @@ public class Solution {
                 }
             }
         }
+
         s.close();
         System.out.println(max);
     }
