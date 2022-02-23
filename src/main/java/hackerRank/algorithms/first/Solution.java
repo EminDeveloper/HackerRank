@@ -1,10 +1,6 @@
-package hackerRank.algoritm.first;
+package hackerRank.algorithms.first;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class Solution {
 
