@@ -44,9 +44,7 @@ class MyBook extends Book{
  *
  *   Print the title, author, and price in the specified format.
  **/
-// Write your method here
 
-// End class
 
 public class Solution {
 
