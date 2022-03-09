@@ -1,4 +1,4 @@
-package hackerRank.days.twelve.twentyfirst;
+package hackerRank.days.twentyfirst;
 
 import java.util.*;
 
